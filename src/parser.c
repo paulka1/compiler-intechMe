@@ -137,8 +137,13 @@ ast_t *parse_expression (buffer_t *buffer, symbol_t **table)
       if (ast_binary_priority(a) < ast_binary_priority(b)) {
 //          empiler b dans pile
         stack_push(&pile, b);
-        exit(0);
-        buf_getchar(buffer);
+       // b = parse_expression_next_symbol(buffer, table);
+       //printf("%d",pile);
+       //printf("%d",sortie);
+       //printf("%d",b);
+
+
+
 //          avancer i sur le symbole suivant
         // TODO: lire le prochain symbole
       }
